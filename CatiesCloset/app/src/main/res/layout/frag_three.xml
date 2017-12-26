@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/init"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="41dp"
+        android:src="@drawable/new3"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/mi_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/init"
+        tools:ignore="UnusedAttribute"
+        android:text="Our Vision" />
+
+    <TextView
+        android:id="@+id/mi_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:gravity="center"
+        android:linksClickable="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:lineSpacingMultiplier="1.25"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/mi_title"
+        android:text="Keep Low-income students from skipping school" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/mi_description"
+        android:layout_gravity="center_horizontal">
+
+        <com.tbuonomo.squaresandcirclesloading.SquaresAndCirclesLoadingView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            app:backgroundColor="#0288D1"
+            app:circlesColor="@color/green"
+            android:layout_weight="1"
+            app:interpolator="anticipate_overshoot"
+            app:animationDuration="1400"/>
+
+        <Button
+            android:id="@+id/button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Donate Now"
+            android:layout_weight="1"
+            android:background="@drawable/login_button_shape"
+            android:textColor="#fff" />
+
+        <com.tbuonomo.squaresandcirclesloading.SquaresAndCirclesLoadingView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            app:backgroundColor="#0288D1"
+            app:circlesColor="@color/green"
+            app:interpolator="anticipate_overshoot"
+            app:animationDuration="1400"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
